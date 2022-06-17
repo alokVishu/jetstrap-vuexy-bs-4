@@ -1,3 +1,7 @@
+@php
+$pageConfigs = ['bodyClass' => "bg-full-screen-image", 'blankPage' => true];
+@endphp
+
 @extends('layouts/fullLayoutMaster')
 
 @section('title', 'Forgot Password')
