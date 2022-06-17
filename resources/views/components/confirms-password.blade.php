@@ -34,7 +34,7 @@ $confirmableId = md5($attributes->wire('then'));
         {{ __('Cancel') }}
       </x-jet-secondary-button>
 
-      <x-jet-button class="ms-1" wire:click="confirmPassword" wire:loading.attr="disabled">
+      <x-jet-button class="ml-1" wire:click="confirmPassword" wire:loading.attr="disabled">
         {{ $button }}
       </x-jet-button>
     </x-slot>

@@ -17,7 +17,7 @@
       <x-jet-label class="form-label" value="{{ __('Team Owner') }}" />
 
       <div class="d-flex mt-1">
-        <img class="rounded-circle me-1" width="48" src="{{ $team->owner->profile_photo_url }}">
+        <img class="rounded-circle mr-1" width="48" src="{{ $team->owner->profile_photo_url }}">
         <div>
           <div>{{ $team->owner->name }}</div>
           <div class="text-muted">{{ $team->owner->email }}</div>

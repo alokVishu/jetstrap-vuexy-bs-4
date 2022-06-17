@@ -9,7 +9,7 @@ $breadcrumbs = [['link' => 'home', 'name' => 'Home'], ['name' => 'API Tokens']];
 
 @section('page-style')
   {{-- Page Css files --}}
-  <link rel="stylesheet" href="{{ asset(mix('css/base/pages/authentication.css')) }}">
+<link rel="stylesheet" href="{{ asset(mix('css/base/pages/page-auth.css')) }}">
 @endsection
 
 @section('content')

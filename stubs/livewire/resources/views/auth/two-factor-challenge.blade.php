@@ -8,7 +8,7 @@ $pageConfigs = ['bodyClass' => "bg-full-screen-image", 'blankPage' => true];
 
 @section('page-style')
   {{-- Page Css files --}}
-  <link rel="stylesheet" href="{{ asset(mix('css/base/pages/authentication.css')) }}">
+<link rel="stylesheet" href="{{ asset(mix('css/base/pages/page-auth.css')) }}">
 @endsection
 
 @section('content')
@@ -51,7 +51,7 @@ $pageConfigs = ['bodyClass' => "bg-full-screen-image", 'blankPage' => true];
                 </g>
               </g>
             </svg>
-            <h2 class="brand-text text-primary ms-1">Vuexy</h2>
+            <h2 class="brand-text text-primary ml-1">Vuexy</h2>
           </a>
 
 
@@ -84,11 +84,11 @@ $pageConfigs = ['bodyClass' => "bg-full-screen-image", 'blankPage' => true];
               </div>
 
               <div class="d-flex justify-content-end mt-2">
-                <button type="button" class="btn btn-outline-secondary me-1" x-show="! recovery"
+                <button type="button" class="btn btn-outline-secondary mr-1" x-show="! recovery"
                   x-on:click="recovery = true; $nextTick(() => { $refs.recovery_code.focus()})">{{ __('Use a recovery code') }}
                 </button>
 
-                <button type="button" class="btn btn-outline-secondary me-1" x-show="recovery"
+                <button type="button" class="btn btn-outline-secondary mr-1" x-show="recovery"
                   x-on:click=" recovery = false; $nextTick(() => { $refs.code.focus() })">
                   {{ __('Use an authentication code') }}
                 </button>

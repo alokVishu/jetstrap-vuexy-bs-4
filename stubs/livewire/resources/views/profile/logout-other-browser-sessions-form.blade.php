@@ -40,7 +40,7 @@
               @endif
             </div>
 
-            <div class="ms-2">
+            <div class="ml-2">
               <div>
                 {{ $session->agent->platform() ? $session->agent->platform() : 'Unknown' }} -
                 {{ $session->agent->browser() ? $session->agent->browser() : 'Unknown' }}
@@ -93,7 +93,7 @@
           {{ __('Cancel') }}
         </x-jet-secondary-button>
 
-        <button class="btn btn-danger ms-1 text-uppercase" wire:click="logoutOtherBrowserSessions"
+        <button class="btn btn-danger ml-1 text-uppercase" wire:click="logoutOtherBrowserSessions"
           wire:loading.attr="disabled">
           {{ __('Log out Other Browser Sessions') }}
         </button>

@@ -47,7 +47,7 @@
                       {{ $role->name }}
                     </span>
                     @if ($addTeamMemberForm['role'] == $role->key)
-                      <svg class="ms-25 text-success fw-light" width="20" fill="none" stroke-linecap="round"
+                      <svg class="ml-25 text-success fw-light" width="20" fill="none" stroke-linecap="round"
                         stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24">
                         <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                       </svg>
@@ -122,7 +122,7 @@
         @foreach ($team->users->sortBy('name') as $user)
           <div class="d-flex justify-content-between mt-2 mb-2">
             <div class="d-flex align-items-center">
-              <div class="pe-1">
+              <div class="pr-1">
                 <img width="32" class="rounded-circle" src="{{ $user->profile_photo_url }}">
               </div>
               <span class="fw-bolder">{{ $user->name }}</span>
@@ -135,7 +135,7 @@
                   {{ Laravel\Jetstream\Jetstream::findRole($user->membership->role)->name }}
                 </button>
               @elseif (Laravel\Jetstream\Jetstream::hasRoles())
-                <button class="btn btn-link text-secondary disabled text-decoration-none ms-2">
+                <button class="btn btn-link text-secondary disabled text-decoration-none ml-2">
                   {{ Laravel\Jetstream\Jetstream::findRole($user->membership->role)->name }}
                 </button>
               @endif
@@ -177,7 +177,7 @@
                 {{ $role->name }}
               </span>
               @if ($currentRole == $role->key)
-                <svg class="ms-25 text-success fw-light" width="20" fill="none" stroke-linecap="round"
+                <svg class="ml-25 text-success fw-light" width="20" fill="none" stroke-linecap="round"
                   stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24">
                   <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
@@ -198,7 +198,7 @@
         {{ __('Cancel') }}
       </x-jet-secondary-button>
 
-      <x-jet-button class="ms-2" wire:click="updateRole" wire:loading.attr="disabled">
+      <x-jet-button class="ml-2" wire:click="updateRole" wire:loading.attr="disabled">
         {{ __('Save') }}
       </x-jet-button>
     </x-slot>
@@ -219,7 +219,7 @@
         {{ __('Cancel') }}
       </x-jet-secondary-button>
 
-      <x-jet-danger-button class="ms-2" wire:click="leaveTeam" wire:loading.attr="disabled">
+      <x-jet-danger-button class="ml-2" wire:click="leaveTeam" wire:loading.attr="disabled">
         {{ __('Leave') }}
       </x-jet-danger-button>
     </x-slot>
@@ -240,7 +240,7 @@
         {{ __('Cancel') }}
       </x-jet-secondary-button>
 
-      <x-jet-danger-button class="ms-2" wire:click="removeTeamMember" wire:loading.attr="disabled">
+      <x-jet-danger-button class="ml-2" wire:click="removeTeamMember" wire:loading.attr="disabled">
         {{ __('Remove') }}
       </x-jet-danger-button>
     </x-slot>

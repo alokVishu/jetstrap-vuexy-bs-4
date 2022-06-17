@@ -30,11 +30,11 @@
           <div class="mt-2 row">
             @foreach (Laravel\Jetstream\Jetstream::$permissions as $permission)
               <div class="col-6">
-                <div class="mb-1">
-                  <div class="form-check">
+                <div class="form-group">
+                  <div class="custom-control custom-checkbox">
                     <x-jet-checkbox wire:model.defer="createApiTokenForm.permissions"
                       id="{{ 'create-' . $permission }}" :value="$permission" />
-                    <label class="form-check-label" for="{{ 'create-' . $permission }}">
+                    <label class="custom-control-label" for="{{ 'create-' . $permission }}">
                       {{ $permission }}
                     </label>
                   </div>
@@ -137,11 +137,11 @@
       <div class="mt-2 row">
         @foreach (Laravel\Jetstream\Jetstream::$permissions as $permission)
           <div class="col-6">
-            <div class="mb-1">
-              <div class="form-check">
+            <div class="form-group">
+              <div class="custom-control custom-checkbox">
                 <x-jet-checkbox wire:model.defer="updateApiTokenForm.permissions" id="{{ 'update-' . $permission }}"
                   :value="$permission" />
-                <label class="form-check-label" for="{{ 'update-' . $permission }}">
+                <label class="custom-control-label" for="{{ 'update-' . $permission }}">
                   {{ $permission }}
                 </label>
               </div>
